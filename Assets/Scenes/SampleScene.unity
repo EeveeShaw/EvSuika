@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextFruitImage: {fileID: 713684548}
-  fruitManager: {fileID: 1598476296}
+  fruitManager: {fileID: 1478124262}
 --- !u!1 &172380759
 GameObject:
   m_ObjectHideFlags: 0
@@ -2455,6 +2455,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1478124261}
+  - component: {fileID: 1478124262}
   m_Layer: 0
   m_Name: ThrowFruitTransform
   m_TagString: Untagged
@@ -2477,6 +2478,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1039842931}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1478124262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478124260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a231e5ed7b47fe409142c66a1acd7e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextFruitsUI: {fileID: 141013496}
+  heldFruitParent: {fileID: 1039842931}
+  droppedFruitParent: {fileID: 1443923116}
+  fruits:
+  - {fileID: 5125279671173502283, guid: ad2a571ee867b1d4e93aed4fbe6d4aa9, type: 3}
+  - {fileID: -6741611299907523453, guid: 1bb003348153f2e48ac9968a1fad77a8, type: 3}
+  - {fileID: -3634592346356079348, guid: 2dce905faf5a6a74fb0ca37ead0b88d7, type: 3}
+  - {fileID: 381895824919692512, guid: 1f4cf76e277e9b94fac8bf98ccfdef98, type: 3}
+  - {fileID: 1943134355332798881, guid: be0e7ff351a13e74090bae6aa1729fb1, type: 3}
+  heldFruit: {fileID: 0}
+  nextFruits:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1598476291
 GameObject:
   m_ObjectHideFlags: 0
@@ -2488,7 +2517,6 @@ GameObject:
   - component: {fileID: 1598476292}
   - component: {fileID: 1598476294}
   - component: {fileID: 1598476295}
-  - component: {fileID: 1598476296}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -2584,34 +2612,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1598476296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1598476291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a231e5ed7b47fe409142c66a1acd7e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heldFruitParent: {fileID: 1039842931}
-  droppedFruitParent: {fileID: 1443923116}
-  spawnOffset: {x: 0, y: 0, z: 0}
-  fruits:
-  - {fileID: 5125279671173502283, guid: ad2a571ee867b1d4e93aed4fbe6d4aa9, type: 3}
-  - {fileID: -6741611299907523453, guid: 1bb003348153f2e48ac9968a1fad77a8, type: 3}
-  - {fileID: -3634592346356079348, guid: 2dce905faf5a6a74fb0ca37ead0b88d7, type: 3}
-  - {fileID: 381895824919692512, guid: 1f4cf76e277e9b94fac8bf98ccfdef98, type: 3}
-  - {fileID: 1943134355332798881, guid: be0e7ff351a13e74090bae6aa1729fb1, type: 3}
-  heldFruit: {fileID: 0}
-  nextFruits:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &1600546193
 GameObject:
   m_ObjectHideFlags: 0
