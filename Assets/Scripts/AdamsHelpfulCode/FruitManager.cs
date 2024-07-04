@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class FruitManager : MonoBehaviour
 {
+    [SerializeField] NextFruits nextFruitsUI;
     [SerializeField] Transform heldFruitParent;
     [SerializeField] Transform droppedFruitParent;
-    [SerializeField] Vector3 spawnOffset;
     [Space]
     [SerializeField] Fruit[] fruits;
     [SerializeField] Fruit heldFruit;
@@ -19,6 +19,7 @@ public class FruitManager : MonoBehaviour
         heldFruit = GetRandomFruit();
         for (int i = 0; i < nextFruits.Length; i++)
             nextFruits[i] = GetRandomFruit();
+        nextFruitsUI.UpdateNextFruitUI();
 
         StartCoroutine(FruitShooter());
     }
@@ -32,7 +33,7 @@ public class FruitManager : MonoBehaviour
         while (true)
         {
             heldFruit = Instantiate(heldFruit,
-                        transform.position + spawnOffset,
+                        transform.position,
                         Quaternion.identity,
                         heldFruitParent);
 
@@ -49,6 +50,8 @@ public class FruitManager : MonoBehaviour
                 nextFruits[^1] = GetRandomFruit();
             }
             else heldFruit = GetRandomFruit();
+
+            nextFruitsUI.UpdateNextFruitUI();
         }
     }
 }
